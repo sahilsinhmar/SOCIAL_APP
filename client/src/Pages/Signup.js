@@ -155,7 +155,7 @@ export const Signup = () => {
             "Sign Up"
           )}
         </button>
-        {error && <div>{error}</div>}
+        {error && <div className="text-black">{error}</div>}
         <div className="flex gap-2 text-black">
           <p>Already have an account ?</p>
           <Link className="text-red-600" to="/login">
