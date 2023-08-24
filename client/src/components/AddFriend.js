@@ -42,7 +42,7 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
           alt="User Profile"
           className="w-12 h-12 rounded-full"
         />
-        <div className="flex justify-between items-center  w-full">
+        <div className="flex justify-between items-center  w-full gap-1">
           <div>
             <Link to={`/profile/${friendId}`}>
               <p className="font-semibold hover:underline">{`${name}`}</p>
@@ -52,9 +52,9 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
 
           <button onClick={handleAdd}>
             {isFriend ? (
-              <MdHowToReg className="w-[25px] h-[25px] dark:text-[#E4E6EB]" />
+              <MdHowToReg className="w-[35px] h-[35px] dark:text-[#E4E6EB]" />
             ) : (
-              <MdPersonAddAlt1 className="w-[25px] h-[25px] dark:text-[#E4E6EB]" />
+              <MdPersonAddAlt1 className="w-[35px] h-[35px] dark:text-[#E4E6EB]" />
             )}
           </button>
         </div>
