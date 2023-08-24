@@ -14,8 +14,8 @@ export const register = async (req, res) => {
       friends,
       location,
       occupation,
-      Followers,
-      Following,
+      followers,
+      following,
     } = req.body;
 
     let secureURL = null;
@@ -46,8 +46,8 @@ export const register = async (req, res) => {
       friends,
       location,
       occupation,
-      Follwers: Math.floor(Math.random() * 10000),
-      Following: Math.floor(Math.random() * 1000),
+      follwers: Math.floor(Math.random() * 10000),
+      following: Math.floor(Math.random() * 1000),
     };
     const user = await User.create({ ...tempUser });
     res.status(201).json({ user });
