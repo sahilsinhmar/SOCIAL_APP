@@ -28,7 +28,7 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "50mb", extended: true }));
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: ["https://social-app-vert-one.vercel.app", "http://localhost:3000"],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Add PATCH to allowed methods
   credentials: true,
 };
