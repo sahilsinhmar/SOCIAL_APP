@@ -123,7 +123,7 @@ const Nav = ({ toggleMobile }) => {
           </div>
         </div>
       </nav>
-      <div className="sm:hidden bottom-0 fixed  dark:bg-[#242526] w-full h-[45px] dark:text-white bg-slate-200 flex items-center justify-between px-6 z-30">
+      <div className="sm:hidden bottom-0 fixed  dark:bg-[#242526] w-full h-[55px] dark:text-white bg-slate-200 flex items-center justify-between px-6 z-30">
         <Link to="/home">
           <RiHomeHeartFill className="dark:text-gray-300 w-[30px] h-[30px]" />
         </Link>

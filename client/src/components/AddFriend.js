@@ -44,9 +44,9 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
         />
         <div className="flex justify-between items-center  w-full gap-1">
           <div>
-            <Link to={`/profile/${friendId}`}>
-              <p className="font-semibold hover:underline">{`${name}`}</p>
-            </Link>
+            {/* <Link to={`/profile/${friendId}`}> */}
+            <p className="font-semibold hover:underline">{`${name}`}</p>
+            {/* </Link> */}
             <p className="text-gray-500">{location ? location : ""}</p>
           </div>
 
