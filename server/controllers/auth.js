@@ -46,7 +46,7 @@ export const register = async (req, res) => {
       friends,
       location,
       occupation,
-      follwers: Math.floor(Math.random() * 10000),
+      followers: Math.floor(Math.random() * 10000),
       following: Math.floor(Math.random() * 1000),
     };
     const user = await User.create({ ...tempUser });

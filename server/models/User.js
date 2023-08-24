@@ -36,8 +36,8 @@ const userSchema = new mongoose.Schema(
     },
     location: String,
     occupation: String,
-    Followers: Number,
-    Following: Number,
+    followers: Number,
+    following: Number,
   },
   { timestamps: true }
 );
