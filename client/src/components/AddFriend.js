@@ -50,13 +50,19 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
             <p className="text-gray-500">{location ? location : ""}</p>
           </div>
 
-          <button onClick={handleAdd}>
+          <div>
             {isFriend ? (
-              <MdHowToReg className="w-[35px] h-[35px] dark:text-[#E4E6EB]" />
+              <MdHowToReg
+                className="w-[35px] h-[35px] dark:text-[#E4E6EB]"
+                onClick={handleAdd}
+              />
             ) : (
-              <MdPersonAddAlt1 className="w-[35px] h-[35px] dark:text-[#E4E6EB]" />
+              <MdPersonAddAlt1
+                className="w-[35px] h-[35px] dark:text-[#E4E6EB]"
+                onClick={handleAdd}
+              />
             )}
-          </button>
+          </div>
         </div>
       </div>
     </div>
