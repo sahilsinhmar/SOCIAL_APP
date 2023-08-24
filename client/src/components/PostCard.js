@@ -42,7 +42,7 @@ const PostCard = ({ post, isProfile }) => {
   const handleLike = async () => {
     try {
       const res = await axios.patch(
-        `http://localhost:3001/api/v1/posts/${postId}/like`,
+        `${process.env.REACT_APP_API_URL}/api/v1/posts/${postId}/like`,
         { userId: id },
         {
           headers: {
@@ -60,7 +60,7 @@ const PostCard = ({ post, isProfile }) => {
   const handleDelete = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3001/api/v1/posts/${id}/${postId}`,
+        `${process.env.REACT_APP_API_URL}/api/v1/posts/${id}/${postId}`,
 
         {
           headers: {
