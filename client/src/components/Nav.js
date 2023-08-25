@@ -168,6 +168,7 @@ const Nav = ({ toggleMobile }) => {
               <MdDelete />
               Delete Account
             </button>
+            <DarkMode />
           </div>
         )}
       </div>
