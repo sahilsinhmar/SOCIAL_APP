@@ -33,7 +33,7 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
 
   return (
     <div
-      className="cursor-pointer md:hidden lg:flex  w-full dark:bg-[#242526] dark:text-[#E4E6EB]
+      className="cursor-pointer  lg:flex  w-full dark:bg-[#242526] dark:text-[#E4E6EB]
     "
     >
       <div className="flex items-center space-x-4 w-full">
