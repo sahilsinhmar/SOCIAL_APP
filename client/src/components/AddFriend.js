@@ -42,7 +42,7 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
           alt="User Profile"
           className="w-12 h-12 rounded-full"
         />
-        <div className="flex justify-between items-center  w-full gap-1">
+        <div className="flex justify-between items-center  w-[100px] gap-1">
           <div>
             <Link to={`/profile/${friendId}`}>
               <p className="font-semibold hover:underline">{`${name}`}</p>
