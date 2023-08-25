@@ -37,16 +37,18 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
     "
     >
       <div className="flex items-center space-x-4 w-full justify-between">
-        <img
-          src={userPicturePath ? userPicturePath : avatar}
-          alt="User Profile"
-          className="w-12 h-12 rounded-full"
-        />
-        <div className="flex-col flex  items-center  w-[100px] gap-1">
-          <Link to={`/profile/${friendId}`}>
-            <p className="font-semibold hover:underline">{`${name}`}</p>
-          </Link>
-          <p className="text-gray-500">{location ? location : ""}</p>
+        <div className="flex items-center justify-center gap-2">
+          <img
+            src={userPicturePath ? userPicturePath : avatar}
+            alt="User Profile"
+            className="w-12 h-12 rounded-full"
+          />
+          <div className="flex-col flex  items-start  w-[150px] ">
+            <Link to={`/profile/${friendId}`}>
+              <p className="font-semibold hover:underline">{`${name}`}</p>
+            </Link>
+            <p className="text-gray-500">{location ? location : ""}</p>
+          </div>
         </div>
         <div>
           <button onClick={handleAdd}>

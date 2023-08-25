@@ -31,7 +31,7 @@ const FriendsWidget = ({ userId }) => {
 
   return (
     <div
-      className="border font-Poppins hidden lg:flex lg:flex-col lg:min-w-[280px]  items-center justify-start  px-2 py-2 shadow-lg rounded-lg dark:bg-[#242526] dark:border-none  min-h-[300px]
+      className="border font-Poppins sm:hidden lg:flex lg:flex-col lg:min-w-[280px]  items-center justify-start  px-2 py-2 shadow-lg rounded-lg dark:bg-[#242526] dark:border-none  min-h-[300px]
     "
     >
       <h2 className="text-xl font-semibold mb-4">Friends</h2>

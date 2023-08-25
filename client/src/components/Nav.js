@@ -6,13 +6,16 @@ import {
   HiOutlineQuestionMarkCircle,
   HiOutlineHome,
 } from "react-icons/hi";
-import { RiHomeHeartFill, RiChat3Fill, RiQuestionFill } from "react-icons/ri";
+import { RiHomeHeartFill, RiChat3Fill } from "react-icons/ri";
+import { FaUserFriends } from "react-icons/fa";
+import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
 import DarkMode from "./DarkMode";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { setLogout } from "../State/authSlice";
 import axios from "axios";
+import FriendsWidget from "./FriendsWidget";
 
 const Nav = ({ toggleMobile }) => {
   const dispatch = useDispatch();
@@ -22,6 +25,7 @@ const Nav = ({ toggleMobile }) => {
   const userId = useSelector((state) => state.user._id);
   const [showUserOptions, setShowUserOptions] = useState(false);
   const [mobileLogOut, setMobileLogOut] = useState(false);
+  const [friendsWidget, setFriendsWidget] = useState(false);
 
   const handleLogOut = () => {
     dispatch(setLogout());
@@ -52,6 +56,10 @@ const Nav = ({ toggleMobile }) => {
 
   const toggleMobileLogOut = () => {
     setMobileLogOut(!mobileLogOut);
+  };
+
+  const toggleFriends = () => {
+    setFriendsWidget(!friendsWidget);
   };
 
   return (
@@ -127,9 +135,14 @@ const Nav = ({ toggleMobile }) => {
         <Link to="/home">
           <RiHomeHeartFill className="dark:text-gray-300 w-[30px] h-[30px]" />
         </Link>
-        <RiChat3Fill className="dark:text-gray-300 w-[30px] h-[30px]" />
-        <Link to="/about" className="text-gray-600 dark:text-gray-300">
-          <RiQuestionFill className=" w-[30px] h-[30px]" />
+
+        <FaUserFriends
+          onClick={toggleFriends}
+          className="dark:text-gray-300 w-[30px] h-[30px]"
+        />
+
+        <Link to="/about" className=" dark:text-gray-300">
+          <BsFillQuestionCircleFill className=" w-[30px] h-[30px]" />
         </Link>
         <img
           src={user.picturePath ? user.picturePath : avatar}
@@ -158,6 +171,11 @@ const Nav = ({ toggleMobile }) => {
           </div>
         )}
       </div>
+      {friendsWidget && (
+        <div className="sm:hidden flex flex-col  bottom-16 w-full fixed dark:text-white dark:bg-[#242526]   p-3 z-10 rounded-xl  justify-end mx-auto">
+          <FriendsWidget userId={userId} />
+        </div>
+      )}
     </>
   );
 };

@@ -44,8 +44,13 @@ export const Profile = () => {
     <>
       <div className="main" />
       <Nav />
-      <main className="App mb-[60px]  p-2 mt-2 pt-4 sm:flex-row sm:justify-between sm:items-start sm:gap-16 lg:justify-around lg:gap-6 ">
+      <main className="App mb-[60px]  p-2 mt-2 pt-4 sm:flex-row sm:justify-between sm:items-start sm:gap-16 lg:justify-around lg:gap-6  ">
         <ProfileWidget user={user} />
+        {!isLoggedInUserProfile && (
+          <div className="sm:hidden flex  mt-4 items-center w-full justify-center">
+            <ProfileFriends userId={userId} />
+          </div>
+        )}
         <div>
           {userId !== loggedUserId ? <div></div> : <CreatePost />}
           <FeedPosts userId={userId} isProfile={true} />

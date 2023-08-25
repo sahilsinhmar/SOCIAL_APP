@@ -54,7 +54,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-4 sm:min-w-[490px] md:min-w-[350px]  mx-auto mt-4 border flex-col flex lg:min-w-[370px] dark:bg-[#242526] dark:text-[#E4E6EB] dark:border-none">
+    <div className="bg-white rounded-lg shadow-lg p-4 sm:min-w-[290px] md:min-w-[350px]  mx-auto mt-4 border flex-col flex lg:min-w-[370px] dark:bg-[#242526] dark:text-[#E4E6EB] dark:border-none">
       <label className=" mb-2 flex items-center justify-between gap-2  p-1">
         <img
           src={user.picturePath ? user.picturePath : avatar}
