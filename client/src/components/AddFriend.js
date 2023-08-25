@@ -36,20 +36,19 @@ const AddFriend = ({ friendId, name, location, userPicturePath }) => {
       className="cursor-pointer  lg:flex  w-full dark:bg-[#242526] dark:text-[#E4E6EB]
     "
     >
-      <div className="flex items-center space-x-4 w-full">
+      <div className="flex items-center space-x-4 w-full justify-between">
         <img
           src={userPicturePath ? userPicturePath : avatar}
           alt="User Profile"
           className="w-12 h-12 rounded-full"
         />
-        <div className="flex justify-between items-center  w-[100px] gap-1">
-          <div>
-            <Link to={`/profile/${friendId}`}>
-              <p className="font-semibold hover:underline">{`${name}`}</p>
-            </Link>
-            <p className="text-gray-500">{location ? location : ""}</p>
-          </div>
-
+        <div className="flex-col flex  items-center  w-[100px] gap-1">
+          <Link to={`/profile/${friendId}`}>
+            <p className="font-semibold hover:underline">{`${name}`}</p>
+          </Link>
+          <p className="text-gray-500">{location ? location : ""}</p>
+        </div>
+        <div>
           <button onClick={handleAdd}>
             {isFriend ? (
               <MdHowToReg className="w-[35px] h-[35px] dark:text-[#E4E6EB]" />
