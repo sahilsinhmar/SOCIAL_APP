@@ -173,7 +173,7 @@ const Nav = ({ toggleMobile }) => {
         )}
       </div>
       {friendsWidget && (
-        <div className="sm:hidden flex flex-col  bottom-16 w-full fixed dark:text-white dark:bg-[#242526]   p-3 z-10 rounded-xl  justify-end mx-auto bg-white">
+        <div className="sm:hidden flex flex-col  bottom-16 w-full fixed dark:text-white dark:bg-[#242526]   p-3 z-10 rounded-xl  justify-end mx-auto bg-slate-200">
           <FriendsWidget userId={userId} />
         </div>
       )}
