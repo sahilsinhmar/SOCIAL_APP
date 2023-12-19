@@ -8,8 +8,8 @@ import collaborate from "../assets/Collaborate.svg";
 
 export const Login = () => {
   const [userCred, setUserCred] = useState({
-    email: "",
-    password: "",
+    email: "virat@gmail.com",
+    password: "123456",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
