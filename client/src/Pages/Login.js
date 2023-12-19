@@ -8,8 +8,8 @@ import collaborate from "../assets/Collaborate.svg";
 
 export const Login = () => {
   const [userCred, setUserCred] = useState({
-    email: "virat@gmail.com",
-    password: "123456",
+    email: "",
+    password: "",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -60,7 +60,7 @@ export const Login = () => {
         <lable className="block mb-2 text-sm font-medium text-gray-700">
           Email
           <input
-            placeholder="Email"
+            placeholder="virat@gmail.com"
             type="email"
             required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}"
@@ -78,7 +78,7 @@ export const Login = () => {
         <lable className="block mb-2 text-sm font-medium text-gray-700">
           Password
           <input
-            placeholder="Password"
+            placeholder="123456"
             type="password"
             onChange={(e) =>
               setUserCred({ ...userCred, password: e.target.value })
